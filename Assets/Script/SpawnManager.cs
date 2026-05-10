@@ -14,9 +14,10 @@ public class SpawnManager : MonoBehaviour
     private float SpawnDelay;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         SpwanPoint = new Vector3(20f,0,0);
+        
         InvokeRepeating("SpwanObstacle",SpawnDelay,TimeToSpawn);
     }
 
@@ -28,6 +29,10 @@ public class SpawnManager : MonoBehaviour
 
     void  SpwanObstacle()
     {
-        Instantiate(ObstacleList[RandomObstacleIndex],SpwanPoint,ObstacleList[RandomObstacleIndex].transform.rotation);
+        if(PlayerController.GetGameStatues()==false)
+        {
+            Instantiate(ObstacleList[RandomObstacleIndex],SpwanPoint,ObstacleList[RandomObstacleIndex].transform.rotation);
+        }
+        
     }
 }

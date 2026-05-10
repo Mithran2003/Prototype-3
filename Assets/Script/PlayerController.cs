@@ -10,6 +10,11 @@ public class PlayerController : MonoBehaviour
     private float JumpForce;
     [SerializeField]
     private float GravityMultiplyer;
+    private static bool GameOver = false;
+    public static bool  GetGameStatues()
+    {
+        return GameOver;
+    }
     private void playerJump()
     {
         while((Input.GetKeyDown(KeyCode.Space))&& IsGrounded)
@@ -36,7 +41,18 @@ public class PlayerController : MonoBehaviour
 
      private void OnCollisionEnter(Collision other)
      {
-        IsGrounded = true; 
+        
+        if(other.gameObject.CompareTag("Ground"))
+        {
+            IsGrounded = true; 
+        }
+
+        else if(other.gameObject.CompareTag("Obstacle"))
+        {
+            GameOver = true;
+            Debug.Log("Game Over !");
+        }
+
      }
     
       

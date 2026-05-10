@@ -471,7 +471,7 @@ Transform:
   m_GameObject: {fileID: 835818919}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 45, y: 9.5, z: 4}
+  m_LocalPosition: {x: 47, y: 9.5, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -489,7 +489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbeab4b7f4596e246b2927dbde00c8b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveLeft
-  speed: 20
+  speed: 12
 --- !u!114 &835818923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -556,7 +556,7 @@ MonoBehaviour:
   - {fileID: 7936765199103813875, guid: 949a4426e61ee19408d0f7357f5d9592, type: 3}
   - {fileID: 814574799511174441, guid: b920ce8bd7bb97648aa65c8dd41c90bd, type: 3}
   - {fileID: 9084759750135267942, guid: 9c887ed2c7353ee499ca1fe2104dbfb5, type: 3}
-  TimeToSpawn: 3
+  TimeToSpawn: 2.25
   SpawnDelay: 4
 --- !u!4 &1779268761
 Transform:
@@ -776,7 +776,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f58925885240f6d4592eb6aac4b8a6f1, type: 2}
+  - {fileID: 2100000, guid: a0cec58fc32f482418596ffdf7c0d693, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

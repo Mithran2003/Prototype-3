@@ -16,6 +16,11 @@ public class DestroyObstacles : MonoBehaviour
         if(transform.position.x <XDestroy)
         {
             Destroy(gameObject);
-        }   
+        }
+        if(PlayerController.GetGameStatues()==true)
+        {
+            Destroy(gameObject);
+        }
+           
     }
 }

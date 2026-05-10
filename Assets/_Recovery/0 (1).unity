@@ -394,8 +394,6 @@ GameObject:
   - component: {fileID: 835818921}
   - component: {fileID: 835818920}
   - component: {fileID: 835818922}
-  - component: {fileID: 835818923}
-  - component: {fileID: 835818924}
   m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
@@ -489,40 +487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbeab4b7f4596e246b2927dbde00c8b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveLeft
-  speed: 20
---- !u!114 &835818923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 835818919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc2674ad95638c54e86d495306d73eac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RepeatBackground
---- !u!65 &835818924
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 835818919}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 112.79999, y: 18.781641, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  speed: 15
 --- !u!1 &1779268759
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,7 +521,7 @@ MonoBehaviour:
   - {fileID: 7936765199103813875, guid: 949a4426e61ee19408d0f7357f5d9592, type: 3}
   - {fileID: 814574799511174441, guid: b920ce8bd7bb97648aa65c8dd41c90bd, type: 3}
   - {fileID: 9084759750135267942, guid: 9c887ed2c7353ee499ca1fe2104dbfb5, type: 3}
-  TimeToSpawn: 3
+  TimeToSpawn: 2.25
   SpawnDelay: 4
 --- !u!4 &1779268761
 Transform:
@@ -776,7 +741,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f58925885240f6d4592eb6aac4b8a6f1, type: 2}
+  - {fileID: 2100000, guid: a0cec58fc32f482418596ffdf7c0d693, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
