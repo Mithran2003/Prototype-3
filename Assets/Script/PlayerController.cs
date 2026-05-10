@@ -19,16 +19,27 @@ public class PlayerController : MonoBehaviour
     {
         return GameOver;
     }
-   
+   [SerializeField]
+   private ParticleSystem GameOverSmoke ;
+   [SerializeField]
+   private ParticleSystem RuningParticle ;
+   [SerializeField]
+   private AudioClip JumpSound;
+   [SerializeField]
+   private AudioClip CrashSound;
+   private AudioSource PlayerAudio;
     private void playerJump()
     {
-        while((Input.GetKeyDown(KeyCode.Space))&& IsGrounded)
+        while((Input.GetKeyDown(KeyCode.Space))&& IsGrounded && GameOver==false)
         {
             playerRB.AddForce(Vector3.up* JumpForce,ForceMode.Impulse);
             IsGrounded = false;
             PlayerAnimator.SetTrigger("Jump_trig");
+            RuningParticle.Stop();
+            PlayerAudio.PlayOneShot(JumpSound,1f);
             break;
         }
+        
         
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -37,7 +48,8 @@ public class PlayerController : MonoBehaviour
         playerRB = GetComponent<Rigidbody>();
         Physics.gravity *=GravityMultiplyer;
         PlayerAnimator = GetComponent<Animator>(); 
-        PlayerPosition =  new Vector3 (-0.5f,0,0);       
+        PlayerPosition =  new Vector3 (-0.5f,0,0);
+        PlayerAudio = GetComponent<AudioSource>();       
     }
 
     // Update is called once per frame
@@ -65,7 +77,8 @@ public class PlayerController : MonoBehaviour
         
         if(other.gameObject.CompareTag("Ground"))
         {
-            IsGrounded = true;          
+            IsGrounded = true;
+            RuningParticle.Play();          
         }
 
         else if(other.gameObject.CompareTag("Obstacle"))
@@ -75,6 +88,9 @@ public class PlayerController : MonoBehaviour
             PlayerAnimator.SetBool("Death_b",true);
             PlayerAnimator.SetInteger("DeathType_int",1);
             other.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.right * 20,ForceMode.Impulse);
+            GameOverSmoke.Play();
+            RuningParticle.Stop();
+            PlayerAudio.PlayOneShot(CrashSound,1f);
         }
 
      }
