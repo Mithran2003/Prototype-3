@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 4524812846873096066}
   - component: {fileID: 3582070239857172314}
   - component: {fileID: 7740081190737111685}
+  - component: {fileID: 128545827561140564}
   m_Layer: 0
   m_Name: Obstacle03
   m_TagString: Untagged
@@ -185,4 +186,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbeab4b7f4596e246b2927dbde00c8b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveLeft
-  speed: 25
+  speed: 20
+--- !u!114 &128545827561140564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9084759750135267942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b6835406589af8489372e16ed7a4c78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyObstacles
+  XDestroy: -10
