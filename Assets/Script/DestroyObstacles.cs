@@ -17,10 +17,7 @@ public class DestroyObstacles : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if(PlayerController.GetGameStatues()==true)
-        {
-            Destroy(gameObject);
-        }
+        
            
     }
 }
