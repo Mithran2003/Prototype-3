@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private float JumpForce;
     [SerializeField]
     private float GravityMultiplyer;
+    private Animator PlayerAnimator;
     private static bool GameOver = false;
     public static bool  GetGameStatues()
     {
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
         {
             playerRB.AddForce(Vector3.up* JumpForce,ForceMode.Impulse);
             IsGrounded = false;
+            PlayerAnimator.SetTrigger("Jump_trig");
             break;
         }
         
@@ -30,6 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         playerRB = GetComponent<Rigidbody>();
         Physics.gravity *=GravityMultiplyer;
+        PlayerAnimator = GetComponent<Animator>();
         
     }
 
