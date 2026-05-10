@@ -74,6 +74,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Game Over !");
             PlayerAnimator.SetBool("Death_b",true);
             PlayerAnimator.SetInteger("DeathType_int",1);
+            other.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.right * 20,ForceMode.Impulse);
         }
 
      }
