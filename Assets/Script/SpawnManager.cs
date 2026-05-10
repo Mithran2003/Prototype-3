@@ -24,7 +24,7 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RandomObstacleIndex = Convert.ToInt16(UnityEngine.Random.Range(0,2));
+        RandomObstacleIndex = Convert.ToInt16(UnityEngine.Random.Range(0,3));
     }
 
     void  SpwanObstacle()
